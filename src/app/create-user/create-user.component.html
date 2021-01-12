@@ -1,0 +1,20 @@
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()" novalidate>
+  <div class="mb-3">
+    <label>Name</label>
+    <input type="text" formControlName="name" class="form-control" required>
+  </div>
+
+  <div class="mb-3">
+    <label>Email</label>
+    <input type="email" formControlName="email" class="form-control" required>
+  </div>
+
+  <div class="mb-3">
+    <label>Contact</label>
+    <input type="text" formControlName="contact" class="form-control" required>
+  </div>
+
+  <div class="mb-3">
+    <button type="submit" class="btn btn-primary" [disabled]="!userForm.valid">Create</button>
+  </div>
+</form>
